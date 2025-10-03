@@ -1,26 +1,52 @@
+
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+
+    <div class=" container">
+      <div class="row text-black bg-opacity-75 ">
+        <div class="col">
+          <h1 style="font-size: 15px; font-family: 'Poppins', sans-serif; text-decoration-line: underline;">{{ title }}
+          </h1>
+
+        </div>
+      </div>
+      <NavDsgn />
+      <HomePG />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HomePG from './components/HomePG.vue'
+import NavDsgn from './components/NavDsgn.vue'
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    NavDsgn,
+    HomePG,
+  },
+  data() {
+    return {
+      title: "Rose A."
+    }
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  min-height: 100vh;
+  background: url('@/assets/layered-waves-haikei.svg') no-repeat center center;
+  background-size: cover;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 100%;
+  margin: 0;
 }
 </style>
